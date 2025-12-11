@@ -25,12 +25,32 @@
 # Refer to the Caddy docs for more information:
 # https://caddyserver.com/docs/caddyfile
 
-https://nc.lankhorst.org {
+https://cloud.lankhorst.org {
         header Strict-Transport-Security max-age=31536000;
-        reverse_proxy 10.2.20.8:11000
+        reverse_proxy 10.2.20.8:80
 }
 
 https://jf.lankhorst.org {
         header Strict-Transport-Security max-age=31536000;
         reverse_proxy 10.2.20.2:8096
+}
+
+https://immich.lankhorst.org {
+        header Strict-Transport-Security max-age=31536000;
+        reverse_proxy 10.2.20.2:8081
+}
+
+https://wishlist.lankhorst.org {
+        header Strict-Transport-Security max-age=31536000;
+        reverse_proxy 10.2.20.11:3280
+}
+
+https://ntfy.lankhorst.org {
+        header Strict-Transport-Security max-age=31536000;
+        reverse_proxy 10.2.20.11:8080
+}
+
+https://nc.lankhorst.org {
+        header Strict-Transport-Security max-age=31536000;
+        reverse_proxy 10.2.20.12:11000
 }
